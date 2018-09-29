@@ -1,0 +1,14 @@
+<h4>Edit Restaurant Info</h4>
+
+<form (submit)='editRestaurant($event)'>
+  <label>Restaurant Name</label>
+  <input type='text' name='name' [(ngModel)]='restaurant.name' required minlength='3'><br />
+
+  <label>Cuisine</label>
+  <input type='text' name='cuisine' [(ngModel)]='restaurant.cuisine' required minlength='3'><br />
+
+  <button type='submit'>Update</button>
+  <button [routerLink]="['/restaurants']">Cancel</button>
+</form>
+
+<p>{{error}}</p>

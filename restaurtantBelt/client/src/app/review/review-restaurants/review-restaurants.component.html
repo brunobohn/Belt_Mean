@@ -1,0 +1,16 @@
+<button [routerLink]="['/write', restaurant.id]">New Review</button>
+
+<h4>Reviews for {{restaurant.name}} ({{restaurant.cuisine}})</h4>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Stars</th>
+    <th>Description</th>
+  </tr>
+  <tr *ngFor='let review of reviews'>
+    <td>{{review.name}}</td>
+    <td>{{review.star}}</td>
+    <td>{{review.content}}</td>
+  </tr>
+</table>

@@ -1,0 +1,14 @@
+<h4 class='text-primary'>Register A Restaurant</h4>
+
+<form (submit)='addRestaurant($event)'>
+  <label>Restaurant Name</label>
+  <input type='text' name='name' [(ngModel)]='restaurant.name' required minlength='3'><br />
+
+  <label>Cuisine</label>
+  <input type='text' name='name' [(ngModel)]='restaurant.cuisine' required minlength='3'><br />
+
+  <button type='submit'>Register</button>
+  <button [routerLink]="['/restaurants']">Cancel</button>
+</form>
+
+<p>{{error}}</p>

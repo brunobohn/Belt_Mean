@@ -1,0 +1,17 @@
+<h4>Write A Review for {{restaurant.name}}</h4>
+
+<form (submit)='addReview($event)'>
+  <label>Customer</label>
+  <input type='text' name='name' [(ngModel)]='review.name' required minlength='3'><br />
+
+  <label>Stars</label>
+  <input type='number' name='star' [(ngModel)]='review.star' required min='1' max='5'><br />
+
+  <label>Your Review:</label>
+  <textarea name="content" rows="8" cols="80" [(ngModel)]='review.content' required minlength='3'></textarea><br />
+
+  <button type='submit'>Submit</button>
+  <button [routerLink]="['/review', restaurant.id]">Cancel</button>
+</form>
+
+<p>{{error}}</p>
