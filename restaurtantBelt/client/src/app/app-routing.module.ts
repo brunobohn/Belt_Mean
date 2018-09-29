@@ -7,7 +7,7 @@ import { ReviewRestaurantsComponent } from './review/review-restaurants/review-r
 import { ReviewNewComponent } from './review/review-new/review-new.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/restaurants' },
+  { path: '', pathMatch: 'full', redirectTo: '/index' },
   { path: 'restaurants',          component: RestaurantrestaurantsComponent },
   { path: 'new',            component: RestaurantNewComponent },
   { path: 'edit/:id',       component: RestaurantEditComponent },
